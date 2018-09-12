@@ -15,7 +15,7 @@ RUN sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
     apt install -y doxygen doxygen-latex doxypy graphviz gsfonts libgd-tools latexmk psutils && \
     apt install -y python-breathe python-sphinx python-pip python3 python3-pip && \
     apt install -y python-scipy python-numpy python-pandas python3-scipy python3-numpy python3-pandas && \
-    apt install -y python3-django python3-pymssql python3-pyodbc python3-pymysql.connector python3-pytest python3-pytest-django && \
+    apt install -y python3-django python3-pymssql python3-pyodbc python3-pymysql python3-pytest python3-pytest-django && \
     apt install -y python3-uritools python3-urllib3 python3-distutils python3-distutils-extra && \
     rm -rf /var/lib/apt/lists/*
 RUN mkdir -p ~/.ssh && \
