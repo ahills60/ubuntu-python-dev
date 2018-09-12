@@ -18,7 +18,8 @@ RUN sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
 RUN mkdir -p ~/.ssh && \
     chmod 700 ~/.ssh
 RUN bash -c "echo -e 'Host *\n\tStrictHostKeyChecking no\n\n' > ~/.ssh/config"
-RUN bash -c "echo -e '#!/bin/bash\ndoxypypy -a -c $1' > /usr/bin/py_filter"
+RUN bash -c "echo -e '#!/bin/bash\ndoxypypy -a -c $1' > /usr/bin/py_filter" && \
+    chmod 700 /usr/bin/py_filter
 RUN pip install doxypypy
 
 CMD ["/bin/bash"]
