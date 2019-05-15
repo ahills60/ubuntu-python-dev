@@ -5,7 +5,7 @@ Provides various build tools including:
 * git + git LFS
 * OpenSSH client
 * Ubuntu's build-essential toolsuite
-* Anaconda Python 2018.12
+* Anaconda Python 2019.03
 * Doxygen, LaTeX and GraphViz package
 * Doxypypy with `py_filter`
 
