@@ -1,4 +1,4 @@
-# ubuntu-arm-dev
+# ubuntu-python-dev
 Python and documentation in Ubuntu
 
 Provides various build tools including:
