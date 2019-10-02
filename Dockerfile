@@ -1,5 +1,5 @@
 # Python build tools in Ubuntu
-# 
+#
 # Andrew Hills (a.hills@sheffield.ac.uk)
 
 FROM ubuntu:latest
@@ -21,12 +21,13 @@ RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_6
     rm ~/anaconda.sh && \
     ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh && \
     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
-    echo "conda activate base" >> ~/.bashrc  
+    echo "conda activate base" >> ~/.bashrc
 RUN mkdir -p ~/.ssh && \
     chmod 700 ~/.ssh
 RUN bash -c "echo -e 'Host *\n\tStrictHostKeyChecking no\n\n' > ~/.ssh/config"
 RUN bash -c 'echo -e "#!/bin/bash\ndoxypypy -a -c \$1" > /usr/bin/py_filter' && \
     chmod 700 /usr/bin/py_filter
 RUN pip install doxypypy
+RUN conda install pandas numpy scipy matplotlib seaborn cython h5py statsmodels scikit-learn  keras -y
 
 CMD ["/bin/bash"]
