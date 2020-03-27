@@ -27,6 +27,6 @@ RUN mkdir -p ~/.ssh && \
 RUN bash -c "echo -e 'Host *\n\tStrictHostKeyChecking no\n\n' > ~/.ssh/config"
 RUN bash -c 'echo -e "#!/bin/bash\ndoxypypy -a -c \$1" > /usr/bin/py_filter' && \
     chmod 700 /usr/bin/py_filter
-RUN pip install doxypypy netifaces
+RUN pip install doxypypy netifaces pdoc pytest
 
 CMD ["/bin/bash"]
