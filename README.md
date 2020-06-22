@@ -8,6 +8,7 @@ Provides various build tools including:
 * Anaconda Python 2019.10
 * Doxygen, LaTeX and GraphViz package
 * Doxypypy with `py_filter`
-* Netifaces module for identifying network interfaces.
+* Netifaces module for identifying network interfaces
+* `semver` library for semantic versioning.
 
 Also prepares the home folder for OpenSSH keys.
