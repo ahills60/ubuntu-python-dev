@@ -14,7 +14,7 @@ RUN sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
     apt install -y software-properties-common && \
     apt install -y byobu curl git htop man unzip vim wget smbclient && \
     apt install -y openssh-client git-lfs make && \
-    apt install -y doxygen doxygen-latex doxypy graphviz gsfonts libgd-tools latexmk psutils && \
+    apt install -y doxygen doxygen-latex graphviz gsfonts libgd-tools latexmk psutils && \
     rm -rf /var/lib/apt/lists/*
 RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -O ~/anaconda.sh && \
     /bin/bash ~/anaconda.sh -b -p /opt/anaconda3 && \
